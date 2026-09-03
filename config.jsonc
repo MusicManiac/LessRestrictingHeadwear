@@ -1,0 +1,18 @@
+{
+  "debug": false,
+  "faceShieldItemIDs": [
+    "5c0e842486f77443a74d2976", "5f60c85b58eff926626a60f7", "5b46238386f7741a693bcf9c",
+    "5ca2113f86f7740b2547e1d2", "5d6d3829a4b9361bc8618943", "5aa7e3abe5b5b000171d064d",
+    "65719f9ef392ad76c50a2ec8", "5a16b7e1fcdbcb00165aa6c9", "658188edf026a90c1708c827",
+    "65818e4e566d2de69901b1b1", "5e00cdd986f7747473332240", "5ac4c50d5acfc40019262e87",
+    "5e01f37686f774773c6f6c15", "5c0919b50db834001b7ce3b9", "5aa7e373e5b5b000137b76f0",
+    "5a16ba61fcdbcb00165aa6c9", "5f60c076f2bcbb675b00dac2", "6570a88c8f221f3b210353b7"
+  ],
+  "faceShieldItemSettings": [false, true, true, true],
+  "itemSettings": {
+    "5a341c4086f77401f2541505": [false, true, true, true],
+    "5645bcb74bdc2ded0b8b4578": [true, false, true, true],
+    "5a341c4686f77469e155819e": [true, true, false, true],
+    "5448e5724bdc2ddf718b4568": [true, true, true, false]
+  }
+}
