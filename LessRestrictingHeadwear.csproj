@@ -1,46 +1,45 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <NoWin32Manifest>true</NoWin32Manifest>
-    <Platforms>AnyCPU;x64</Platforms>
+    <OutputType>Library</OutputType>
+    <AssemblyName>LessRestrictingHeadwear</AssemblyName>
+    <RootNamespace>LessRestrictingHeadwear</RootNamespace>
+    <Version>4.0.0</Version>
     <Authors>MusicManiac</Authors>
-    <Title>Less Restricting Headwear</Title>
-    <RepositoryUrl>https://github.com/MusicManiac/LessRestrictingHeadwear</RepositoryUrl>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Company>MusicManiac</Company>
+    <Copyright>Copyright (c) 2023-2026 MusicManiac</Copyright>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <SptPath Condition="'$(SptPath)' == ''">$(MSBuildThisFileDirectory)..\..\SPT_Runtime</SptPath>
+    <OutputPath>$(MSBuildThisFileDirectory)dist\LessRestrictingHeadwear\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <DebugType>none</DebugType>
-    <IsPublishable>False</IsPublishable>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <DebugType>none</DebugType>
-    <IsPublishable>False</IsPublishable>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DebugType>none</DebugType>
-    <IsPublishable>False</IsPublishable>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <DebugType>none</DebugType>
-    <IsPublishable>False</IsPublishable>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SPTarkov.Server.Core" Version="4.0.1" />
+    <Reference Include="SPTarkov.Common">
+      <HintPath>$(SptPath)\SPTarkov.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SPTarkov.DI">
+      <HintPath>$(SptPath)\SPTarkov.DI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SPTarkov.Server.Core">
+      <HintPath>$(SptPath)\SPTarkov.Server.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SemanticVersioning">
+      <HintPath>$(SptPath)\SemanticVersioning.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="LICENSE">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <None Update="config.jsonc" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="LICENSE" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="README.md" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
-
 </Project>

@@ -1,0 +1,15 @@
+{
+  // Enable detailed discovery and per-item change logging.
+  "debug": false,
+
+  // Compatibility is symmetric: a rule applies regardless of which item
+  // contains the block flag or explicit conflict entry.
+  "compatibility": {
+    "headwearWithEarpiece": true,
+    "headwearWithFaceCover": true,
+    "headwearWithEyewear": true,
+    "earpieceWithFaceCover": true,
+    "earpieceWithEyewear": true,
+    "faceCoverWithEyewear": true
+  }
+}
